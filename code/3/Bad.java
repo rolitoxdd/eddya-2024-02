@@ -1,11 +1,12 @@
+
 import java.util.HashSet;
+
 
 public class Bad {
   public static void main(String[] args) {
 
     long startTime = System.nanoTime();
-    // System.out.println(intToBin(5));
-    System.out.println(intToBin(Long.MAX_VALUE - (long) 10000));
+    System.out.println(intToBin(Long.MAX_VALUE - (long) 1000));
     long endTime = System.nanoTime();
     System.out.println("Total execution time: " + (endTime - startTime) + "ns");
   }
