@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 public class Fib {
 
   public static int fib(int n) {
