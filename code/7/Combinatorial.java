@@ -3,8 +3,8 @@ import java.util.LinkedList;
 public record Combinatorial() {
   public static void main(String[] args) {
     // permutations(new int[]{1,2,3}, 0, 2);
-    // List<Integer> l = new LinkedList<Integer>();
-    // subsets(l, 0, 2);
+    // LinkedList<Integer> l = new LinkedList<Integer>();
+    // subsets(l, 1, 3);
     subarrays(new int[] { 1, 2, 3 }, 0, 0);
   }
 
