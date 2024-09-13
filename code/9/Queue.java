@@ -5,14 +5,13 @@ public class Queue {
 
     Node(int data) {
       this.data = data;
-      this.next = null;
     }
   }
 
   Node head, tail;
 
-  public void enqueue(int value) {
-    Node newNode = new Node(value);
+  public void enqueue(int data) {
+    Node newNode = new Node(data);
     if (tail != null) {
       tail.next = newNode;
     } else {
@@ -26,23 +25,22 @@ public class Queue {
   }
 
   public int dequeue() {
-    int value = head.data;
+    int tmp = head.data;
     head = head.next;
-    if (head == null) {
-      tail = null;
-    }
-    return value;
+    return tmp;
   }
 
   public static void main(String[] args) {
     Queue q = new Queue();
 
     q.enqueue(5);
+    q.enqueue(3);
     q.enqueue(7);
-    q.enqueue(23);
-
-    System.out.println(q.peek()); // 5
+    System.out.println(q.peek());
     q.dequeue();
-    System.out.println(q.peek()); // 7
+
+    System.out.println(q.peek());
   }
+
+
 }

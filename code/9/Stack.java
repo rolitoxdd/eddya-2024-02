@@ -4,49 +4,38 @@ public class Stack {
     int data;
     Node next;
 
-    public Node(int data) {
+    Node(int data) {
       this.data = data;
+      this.next = null;
     }
   }
 
   Node head;
 
   public void push(int data) {
-    if (head == null) {
-      head = new Node(data);
-      return;
-    }
-    Node newHead = new Node(data);
-    newHead.next = head;
-    head = newHead;
+    Node newNode = new Node(data);
+    newNode.next = head;
+    head = newNode;
   }
 
-  public int peek() {
-    if (head == null) {
-      return -1;
-    }
+  public int top() {
     return head.data;
   }
 
   public int pop() {
-    if (head == null) {
-      return -1;
-    }
-    int data = head.data;
+    int tmp = head.data;
     head = head.next;
-    return data;
+    return tmp;
   }
 
   public static void main(String[] args) {
-    Stack stack = new Stack();
-    stack.push(3);
-
-    stack.push(9);
-    stack.push(7);
-    stack.push(23);
-    System.out.println(stack.peek()); // 23
-    System.out.println(stack.pop()); // 23
-    System.out.println(stack.peek()); // 7
-
+    Stack s = new Stack();
+    s.push(3);
+    s.push(5);
+    s.push(7);
+    System.out.println(s.top()); // 7
+    s.pop();
+    System.out.println(s.top()); // 5
   }
+
 }
