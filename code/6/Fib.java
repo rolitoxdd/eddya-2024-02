@@ -10,7 +10,9 @@ public class Fib {
 
   public static void main(String[] a) {
     long startTime = System.nanoTime();
-    long result = fib(50, new int[51]);
+    long result = fib(100, new int[101]);
+    // long result = fib(50);
+
     long endTime = System.nanoTime();
     System.out.println("resultado: " + result + "\ntiempo:" + (endTime - startTime));
 
